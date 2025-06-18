@@ -1,0 +1,32 @@
+{
+    "include": [
+        "**/*.py"
+    ],
+    "exclude": [
+        "**/__pycache__",
+        "**/.venv",
+        "**/migrations",
+        "manage.py",
+        "pyrightconfig.json"
+    ],
+    "venvPath": ".",
+    "venv": ".venv", // Or whatever your virtual environment folder is named
+    "reportMissingTypeStubs": false, // Often useful to turn off initially
+    "reportUnknownMemberType": false, // Can help with ORM dynamics
+    "reportAttributeAccessIssue": false, // Can help with ORM dynamics, or use "none"
+    "reportUndefinedVariable": false, // Can help with ORM dynamics, or use "none"
+    "extraPaths": [
+        "./polls" // Add paths to your Django apps here if needed
+    ],
+    "executionEnvironments": [
+        {
+            "root": ".",
+            "pythonVersion": "3.13", // Your Python version
+            "pythonPlatform": "Linux", // Your OS
+            "defines": {
+                "DJANGO_SETTINGS_MODULE": "library_management.settings" // Crucial for Django awareness
+            }
+        }
+    ],
+    "typeCheckingMode": "basic" // Start with "basic" or "strict" if you want more checks
+}
